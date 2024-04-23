@@ -8,6 +8,37 @@
 <body>
   <h1>Noosphere</h1>
   <div id="submodules"></div>
-  <script src="script.js"></script>
+  <script>
+    // Function to read a file
+    function readFile(filePath) {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', filePath, false);
+      xhr.send();
+      return xhr.responseText;
+    }
+
+    // Read the .gitmodules file
+    const gitmodulesContent = readFile('/../.gitmodules');
+
+    // Parse the .gitmodules file content
+    const submodules = gitmodulesContent.split('[submodule')
+      .slice(1)
+      .map(submoduleEntry => {
+        const lines = submoduleEntry.split('\n');
+        const path = lines.find(line => line.startsWith('path')).split('=')[1].trim();
+        const url = lines.find(line => line.startsWith('url')).split('=')[1].trim();
+        return { path, url };
+      });
+
+    // Get the submodules container element
+    const submodulesContainer = document.getElementById('submodules');
+
+    // Loop through the submodules and create a paragraph for each one
+    submodules.forEach(submodule => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = `${submodule.path} (${submodule.url})`;
+      submodulesContainer.appendChild(paragraph);
+    });
+  </script>
 </body>
 </html>
