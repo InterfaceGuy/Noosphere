@@ -4,3 +4,6 @@
 [submodule "Narrative"]
 	path = Narrative
 	url = https://github.com/InterfaceGuy/Narrative.git
+[submodule "LiminalWebUI"]
+	path = LiminalWebUI
+	url = https://github.com/InterfaceGuy/LiminalWebUI
