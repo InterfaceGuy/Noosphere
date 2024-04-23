@@ -1,2 +1,0 @@
-# Noosphere
-![](Noosphere.png)
