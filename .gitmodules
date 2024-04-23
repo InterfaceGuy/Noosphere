@@ -1,0 +1,6 @@
+[submodule "Vision"]
+	path = Vision
+	url = https://github.com/InterfaceGuy/Vision.git
+[submodule "Narrative"]
+	path = Narrative
+	url = https://github.com/InterfaceGuy/Narrative.git
