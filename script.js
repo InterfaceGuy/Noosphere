@@ -17,7 +17,7 @@ function loadFile(filePath) {
 }
 
 // Load the .gitmodules file
-loadFile('.gitmodules')
+loadFile('/.gitmodules')
   .then(gitmodulesContent => {
     // Parse the .gitmodules file content
     const submodules = gitmodulesContent.split('[submodule')
