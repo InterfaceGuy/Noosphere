@@ -1,1 +1,2 @@
 # Noosphere
+![](Noosphere.png)
