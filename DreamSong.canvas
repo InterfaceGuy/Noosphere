@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"82fcf0fd9d862d01","x":180,"y":-200,"width":400,"height":400,"type":"file","file":"Narrative/README.md"},
+		{"id":"ff4693eb3ccb6bec","x":-560,"y":-200,"width":400,"height":400,"type":"file","file":"Vision/README.md"}
+	],
+	"edges":[]
+}
